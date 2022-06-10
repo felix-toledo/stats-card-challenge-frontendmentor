@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  background-color: hsl(233deg, 47%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 10vh 5vw;
+  width: 100%;
+}
+
+.card {
+  background-color: hsl(244deg, 38%, 16%);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.imgContainer {
+  order: 1;
+}
+.imgContainer img {
+  width: 100%;
+  filter: opacity(0.3) drop-shadow(0 0 0 hsl(277deg, 64%, 61%));
+}
+
+.textPart {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.textPart h1 {
+  width: 100%;
+  text-align: center;
+}
+.textPart h1 b {
+  color: hsl(277deg, 64%, 61%);
+}
+.textPart p {
+  margin-top: 20px;
+  text-align: center;
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+.textPart ul {
+  margin-top: 20px;
+  list-style: none;
+}
+.textPart ul li {
+  text-align: center;
+  font-weight: 700;
+  font-size: x-large;
+  margin-bottom: 30px;
+}
+.textPart ul li span {
+  font-weight: 400;
+  font-size: small;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+
+#footer {
+  background-color: hsl(233deg, 47%, 7%);
+  text-align: center;
+}
+#footer p {
+  display: inline-block;
+}
+#footer p a {
+  color: hsl(277deg, 64%, 61%);
+  text-decoration: none;
+}
+#footer p a:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
