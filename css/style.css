@@ -64,6 +64,7 @@ main {
   margin-bottom: 30px;
 }
 .textPart ul li span {
+  font-family: "Lexend Deca", sans-serif;
   font-weight: 400;
   font-size: small;
   color: hsla(0deg, 0%, 100%, 0.6);
