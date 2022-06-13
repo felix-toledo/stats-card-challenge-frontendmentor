@@ -37,7 +37,10 @@ main {
 }
 .imgContainer .img-desktop {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  width: 2px;
 }
 
 .textPart {
@@ -89,6 +92,87 @@ main {
 }
 #footer p a:hover {
   color: white;
+}
+
+@media only screen and (min-width: 992px) {
+  main {
+    height: 96vh;
+  }
+
+  .card {
+    background-color: hsl(244deg, 38%, 16%);
+    width: 80%;
+    height: 390px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .imgContainer {
+    order: 2;
+    height: auto;
+    overflow: hidden;
+  }
+  .imgContainer .img-mobile {
+    visibility: hidden;
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    width: 2px;
+  }
+  .imgContainer .img-desktop {
+    visibility: visible;
+    position: relative;
+    width: 100%;
+    filter: opacity(0.3) drop-shadow(0 0 0 hsl(277deg, 64%, 61%));
+  }
+
+  .textPart {
+    order: 1;
+    margin: auto;
+    padding: 50px;
+  }
+  .textPart h1 {
+    width: 100%;
+    text-align: left;
+  }
+  .textPart p {
+    margin-top: 20px;
+    text-align: left;
+  }
+  .textPart ul {
+    margin-top: 70px;
+  }
+  .textPart ul .margin {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .textPart ul li {
+    display: inline-block;
+    text-align: left;
+  }
+  .textPart ul li span {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: small;
+    color: hsla(0deg, 0%, 100%, 0.6);
+  }
+
+  #footer {
+    height: 4vh;
+    background-color: hsl(233deg, 47%, 7%);
+    text-align: center;
+  }
+  #footer p {
+    display: inline-block;
+  }
+  #footer p a {
+    color: hsl(277deg, 64%, 61%);
+    text-decoration: none;
+  }
+  #footer p a:hover {
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

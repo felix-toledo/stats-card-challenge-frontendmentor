@@ -39,7 +39,10 @@ main
     }
     .img-desktop{
         visibility: hidden;
-        position: absolute;
+        position: fixed;
+        top: 2px;
+        left: 2px;
+        width: 2px;
     }
 }
 
@@ -89,6 +92,86 @@ main
             text-decoration: none;
             &:hover{
                 color: white;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px){
+    main{
+        height: 100vh - 4vh;
+    }
+
+    .card{
+        background-color: $card-color;
+        width: 80%;
+        height: 390px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .imgContainer{
+        order: 2;
+        height: auto;
+        overflow: hidden;
+        .img-mobile{
+            visibility: hidden;
+            position: fixed;
+            top: 2px;
+            left: 2px;
+            width: 2px;
+        }
+        .img-desktop{
+            visibility: visible;
+            position: relative;
+            width: 100%;
+            filter: opacity(0.3) drop-shadow(0 0 0 $accent); 
+        }
+    }
+
+    .textPart{
+        order: 1;
+        margin: auto;
+        padding: 50px;
+        h1{
+            width: 100%;
+            text-align: left;
+        }
+	p{
+            margin-top: 20px;
+            text-align: left;
+        }
+        ul{
+            margin-top: 70px;
+            .margin{
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            li{
+                display: inline-block;
+                text-align: left;
+                span{
+                    font-family: 'Lexend Deca', sans-serif;
+                    font-weight: 400;
+                    font-size: small;
+                    color: $stats-color;
+                }
+            }
+        }
+    }
+    
+    #footer{
+        height: 4vh;
+        background-color: $main-color;
+        text-align: center;
+        p{
+            display: inline-block;
+            a{
+                color: $accent;
+                text-decoration: none;
+                &:hover{
+                    color: white;
+                }
             }
         }
     }
